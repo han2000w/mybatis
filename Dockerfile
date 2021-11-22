@@ -4,4 +4,6 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} sample.jar
 COPY scouter-agent-java-2.15.0.jar scouter-agent-java-2.15.0.jar
 COPY scouter.conf scouter.conf
+ENV JAVA_HOME /usr/local/openjdk-11/
+RUN export JAVA_HOME
 ENTRYPOINT ["sh", "-c", "java -javaagent:/scouter-agent-java-2.15.0.jar -Dscouter.config=/scouter.conf -jar /sample.jar"]
