@@ -27,15 +27,6 @@ public class DatasourceConfiguration {
         return sessionFactory.getObject();
     }
 
-    private HikariDataSource dataSource;
-
-    @PostConstruct
-    public void init() throws Exception {
-        MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
-        ObjectName objectName = new ObjectName("com.test:type=DataSource,name=hikari-pool,context=/");
-        DataSourceMonitoring dataSourceMonitoring = new DataSourceMonitoring(dataSource);
-        mBeanServer.registerMBean(dataSourceMonitoring, objectName);
-    }
 }
 
 
