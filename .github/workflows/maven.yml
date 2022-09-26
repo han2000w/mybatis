@@ -50,4 +50,4 @@ jobs:
         port: ${{ secrets.REMOTE_SSH_PORT }}
         script: |
           sudo mv /home/ec2-user/files/target/* /tmp
-        
+          sudo chown root.root /tmp/mybatis-0.0.1-SNAPSHOT.jar
