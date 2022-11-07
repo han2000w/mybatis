@@ -1,0 +1,36 @@
+name: NPM build DEV
+
+on:
+    push:
+        branches: ["master"]
+    pull_request:
+        branches: ["master"]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: action-slack
+              uses: 8398a7/action-slack@v3
+              with:
+                  status: custom
+                  custom_payload: |
+                      {
+                        attachments: [{
+                       text: `Start Build GBTem dev_test(${process.env.AS_COMMIT})`
+                       }]
+                      }
+              env:
+                  SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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 # required
+              if: always() # Pick up events even if the job fails or is canceled.
+
+ 
+            - name: action-slack
+              uses: 8398a7/action-slack@v3
+              with:
+                  status: ${{ job.status }}
+                  author_name: GBTem dev_test # default: 8398a7@action-slack
+                  fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+              env:
+                  SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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 # required
+              if: always() # Pick up events even if the job fails or is canceled.
