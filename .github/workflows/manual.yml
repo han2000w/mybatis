@@ -21,7 +21,7 @@ jobs:
                        }]
                       }
               env:
-                  SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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 # required
+                  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
               if: always() # Pick up events even if the job fails or is canceled.
 
  
@@ -32,5 +32,5 @@ jobs:
                   author_name: GBTem dev_test # default: 8398a7@action-slack
                   fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
               env:
-                  SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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 # required
+                  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
               if: always() # Pick up events even if the job fails or is canceled.
