@@ -16,7 +16,7 @@ jobs:
                   status: custom
                   custom_payload: |
                       {
-                       text: ':arrow_forward: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
+                       text: ':white_check_mark: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
                        color: '#0101DF'
                       }
               env:
