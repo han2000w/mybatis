@@ -16,10 +16,8 @@ jobs:
                   status: custom
                   custom_payload: |
                       {
-                        attachments: [{
                        text: ':arrow_forward: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
                        color: '#0101DF'
-                       }]
                       }
               env:
                   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
