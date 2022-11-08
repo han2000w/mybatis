@@ -14,7 +14,7 @@ jobs:
               uses: 8398a7/action-slack@v3
               with:
                   status: custom
-                  fields: repo,ref,author
+                  fields: repo,ref,author,commit
                   custom_payload: |
                       {
                        text: `:ballot_box_with_check: Start Build GBTem dev_test(${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR}`,
