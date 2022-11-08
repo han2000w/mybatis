@@ -17,9 +17,8 @@ jobs:
                   custom_payload: |
                       {
                         attachments: [{
-                       text: 'Start Build GBTem dev_test(${process.env.AS_COMMIT})',
-                       color: '#36a64f',
-                       author_name: 'Bobby Tables'
+                       text: ':start: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
+                       color: '#46a64g',
                        
                        }]
                       }
