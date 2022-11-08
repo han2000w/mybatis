@@ -17,8 +17,8 @@ jobs:
                   custom_payload: |
                       {
                         attachments: [{
-                       text: ':arrow_forward: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
-                       color: '#0101DF
+                       text: ':앞쪽_화살표: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
+                       color: '#0101DF'
                        }]
                       }
               env:
