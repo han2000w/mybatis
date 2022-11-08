@@ -22,7 +22,7 @@ jobs:
                             {
                               title: repo,
                               value: `${process.env.AS_REPO}@${process.env.AS_REF}`,
-                              short: true,
+                              short: false
                              }
                              ]
                        color: '#0101DF'
