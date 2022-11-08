@@ -16,8 +16,11 @@ jobs:
                   status: custom
                   custom_payload: |
                       {
-                       text: ':white_check_mark: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
+                       text: ':large_bue_square: Start Build GBTem dev_test',
+                        attachments: [{
+                       text: '(${process.env.AS_COMMIT})',
                        color: '#0101DF'
+                       }]
                       }
               env:
                   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
