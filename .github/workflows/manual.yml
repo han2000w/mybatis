@@ -14,10 +14,10 @@ jobs:
               uses: 8398a7/action-slack@v3
               with:
                   status: custom
-                  fields: repo,ref,author,commit
+                  fields: author,commit
                   custom_payload: |
                       {
-                       text: `:ballot_box_with_check: Start Build GBTem dev_test(${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR}`,
+                       text: `:ballot_box_with_check: Start Build GBTem/dev_test(${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR}`,
                        attachments: [{
                        text: '12345',
                        color: '#0101DF'
