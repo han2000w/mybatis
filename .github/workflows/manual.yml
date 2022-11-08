@@ -17,7 +17,7 @@ jobs:
                   fields: author,commit
                   custom_payload: |
                       {
-                       text: `:ballot_box_with_check: Start Build GBTem/dev_test(${process.env.AS_COMMIT})`,
+                       text: `:warning: Start Build GBTem/dev_test(${process.env.AS_COMMIT})`,
                        attachments: [{
                        color: '#0101DF',
                        text: `by ${process.env.AS_AUTHOR}`
