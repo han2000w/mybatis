@@ -24,7 +24,7 @@ jobs:
                        }]
                       }              
               env:
-                  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required2
+                  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required22
               if: always() # Pick up events even if the job fails or is canceled.
 
  
