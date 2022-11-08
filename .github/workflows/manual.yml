@@ -18,8 +18,7 @@ jobs:
                       {
                         attachments: [{
                        text: ':arrow_forward: Start Build GBTem dev_test(${process.env.AS_COMMIT})',
-                       color: '#0101DF,
-                       
+                       color: '#0101DF
                        }]
                       }
               env:
