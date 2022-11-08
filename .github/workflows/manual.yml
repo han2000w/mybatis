@@ -20,7 +20,7 @@ jobs:
                        text: `:warning: Start Build GBTem/dev_test(${process.env.AS_COMMIT})`,
                        attachments: [{
                        color: '#0101DF',
-                       text: `by ${process.env.AS_AUTHOR}`
+                       text: 'by ${process.env.AS_AUTHOR}'
                        }]
                       }              
               env:
