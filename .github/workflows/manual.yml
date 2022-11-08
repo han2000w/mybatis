@@ -18,7 +18,7 @@ jobs:
                   custom_payload: |
                       {
                        #text: `:heavy_check_mark: Start Build GBTem/dev_test(${process.env.AS_COMMIT})`,
-                       #text: `:warning: Start Build GBTem/dev_test(${process.env.AS_COMMIT})`,
+                       text: `:warning: Start Build GBTem/dev_test(${process.env.AS_COMMIT})`,
                        attachments: [{
                        color: '#0101DF',
                        text: `by ${process.env.AS_AUTHOR}`
