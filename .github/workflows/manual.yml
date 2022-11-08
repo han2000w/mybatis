@@ -18,7 +18,12 @@ jobs:
                       {
                        text: `:ballot_box_with_check: Start Build GBTem dev_test(${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR}`,
                        attachments: [{
-                       text: `123`,
+                       fields: [
+                            {
+                              title: repo,
+                              value: `${process.env.AS_REPO}@${process.env.AS_REF}`,
+                              short: true,
+                             }
                        color: '#0101DF'
                        }]
                       }
