@@ -24,6 +24,7 @@ jobs:
                               value: `${process.env.AS_REPO}@${process.env.AS_REF}`,
                               short: true,
                              }
+                             ]
                        color: '#0101DF'
                        }]
                       }
