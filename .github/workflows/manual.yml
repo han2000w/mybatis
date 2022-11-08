@@ -17,7 +17,7 @@ jobs:
                   custom_payload: |
                       {
                        attachments: [{
-                       text: ':large_blue_square: Start Build GBTem dev_test' `(${process.env.AS_COMMIT})`,
+                       text: `:large_blue_square: Start Build GBTem dev_test (${process.env.AS_COMMIT})`,
                        color: '#0101DF'
                        }]
                       }
