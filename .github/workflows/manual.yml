@@ -14,7 +14,7 @@ jobs:
               uses: 8398a7/action-slack@v3
               with:
                   status: custom
-                  fields: author
+                  fields: author,commit
                   custom_payload: |
                       {
                        text: `:warning: Start Build GBTem/dev_test(${process.env.AS_COMMIT})`,
