@@ -14,20 +14,15 @@ jobs:
               uses: 8398a7/action-slack@v3
               with:
                   status: custom
+                  fields: repo,ref,author
                   custom_payload: |
                       {
                        text: `:ballot_box_with_check: Start Build GBTem dev_test(${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR}`,
                        attachments: [{
-                       fields: [
-                            {
-                              title: repo,
-                              value: `${process.env.AS_REPO}@${process.env.AS_REF}`,
-                              short: false
-                             }
-                             ]
+                       text: '12345'
                        color: '#0101DF'
                        }]
-                      }
+                      }              
               env:
                   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
               if: always() # Pick up events even if the job fails or is canceled.
