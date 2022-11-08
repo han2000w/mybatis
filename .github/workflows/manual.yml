@@ -17,7 +17,7 @@ jobs:
                   custom_payload: |
                       {
                        attachments: [{
-                       text: `:large_blue_square: Start Build GBTem dev_test (${process.env.AS_COMMIT})`,
+                       text: `:ballot_box_with_check: Start Build GBTem dev_test (${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR}`,
                        color: '#0101DF'
                        }]
                       }
