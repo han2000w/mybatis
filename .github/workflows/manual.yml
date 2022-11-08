@@ -17,7 +17,10 @@ jobs:
                   fields: author,commit
                   custom_payload: |
                       {
+                       attachments: [{
+                       color: '#0101DF',
                        text: `:ballot_box_with_check: Start Build GBTem/dev_test(${process.env.AS_COMMIT}) by ${process.env.AS_AUTHOR}`
+                       }]
                       }              
               env:
                   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
